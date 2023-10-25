@@ -1,3 +1,5 @@
+# Rob's codec file
+
 def encode():
     password = input("Data to encode: ")
     encoded_password = ""
