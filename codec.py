@@ -1,28 +1,39 @@
 # Rob's codec file
 
+
 def encode():
-    password = input("Data to encode: ")
+    password = input("Please enter your password to encode: ")
     encoded_password = ""
 
     for digit in password:
         encoded_password += str((int(digit) + 3) % 10)
 
-    print(f"Encoded data: {encoded_password}")
+    print("Your password has been encoded and stored!")
+    return encoded_password
+
+
+def decode(encoded_password):
+    print("To be done by Jake")
 
 
 def main():
     while True:
-        print("0. Exit")
+        print("Menu")
+        print("-------------")
         print("1. Encode")
-        print("2. Decode", end="\n\n")
+        print("2. Decode")
+        print("3. Quit", end="\n\n")
 
-        option = int(input("Menu option: "))
+        option = int(input("Please enter an option: "))
+        encoded_password = ""
 
         match option:
-            case 0:
-                exit()
             case 1:
-                encode()
+                encoded_password = encode()
+            case 2:
+                decode(encoded_password)
+            case 3:
+                exit()
 
 
 if __name__ == "__main__":
