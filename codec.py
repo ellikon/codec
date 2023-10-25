@@ -1,7 +1,10 @@
 # Rob's codec file
-
+password = ""
+encoded_password = ""
 
 def encode():
+    global password
+    global encoded_password
     password = input("Please enter your password to encode: ")
     encoded_password = ""
 
@@ -13,7 +16,7 @@ def encode():
 
 
 def decode(encoded_password):
-    print("To be done by Jake")
+    print(f"The encoded password is {encoded_password}, and the original password is {password}.")
 
 
 def main():
@@ -25,7 +28,6 @@ def main():
         print("3. Quit", end="\n\n")
 
         option = int(input("Please enter an option: "))
-        encoded_password = ""
 
         match option:
             case 1:
